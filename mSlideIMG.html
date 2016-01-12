@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+	<meta name="format-detection"content="telephone=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<title>touch slide img</title>
+	<script type="text/javascript">	
+	var now = Date.now();
+	</script>
+<style>
+body,div,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,iframe,input,textarea,select,label,article,aside,footer,header,menu,nav,section,time,audio,video{margin:0;padding:0;}
+ol,ul,li{list-style: none;}
+body{font-size: 100%; font-family: Helvetica,STHeiti,Droid Sans Fallback;}
+
+.mslide{position: relative;width: 100%;overflow: hidden; margin:15px 0;}
+
+.mcontent{
+	width: 100%;
+	overflow: hidden;
+}	
+.mcontent li{
+	width: 100%;
+	float: left;
+}
+.mcontent li img{
+	width: 100%;
+}
+.mnav{ position:absolute; bottom:5px; left:0; text-align:center; width:100%; height:10px; line-height:10px;}
+.mnav li{display:inline-block; vertical-align:top; width:8px; height:8px; border-radius:4px; margin:0 5px; background:#FFF;overflow:hidden;font-size:0;line-height:0;color:rgba(0,0,0,0); }
+.mnav li.current{ background:#F00;}
+.mnav li.active{background: #000;}
+
+.mnav2{ position:absolute; bottom:5px; left:0; text-align:center; width:100%; height:15px; line-height:15px;}
+.mnav2 li{display:inline-block; vertical-align:top; width:10px; height:10px;border: 1px solid #fff; border-radius:6px; margin:0 5px; background: transparent;overflow:hidden;font-size:0;line-height:0;color:rgba(0,0,0,0); }
+.mnav2 li.current{ background:#f00;}
+.mnav2 li.active{background: #000;}
+
+</style>
+<script type="text/javascript" src="mSlideIMG.min.js"></script>
+<script type="text/javascript">	
+	document.addEventListener('DOMContentLoaded',function(){
+		new mSlideIMG({
+			mslide: '#slide',
+			mcontent: '#slide .mcontent',
+			navclass: 'mnav2',
+			current: 'active',
+			index: 1
+		});
+		
+		new mSlideIMG({
+			mslide: '#slide2',
+			mcontent: '#slide2 .mcontent',
+			auto: true,
+			delay: 5000,
+			duration: 500
+		});
+
+		new mSlideIMG({
+			mslide: '#slide3',
+			mcontent: '#slide3 .mcontent',
+			navclass: 'mnav2',
+			current: 'active',
+			index: 3,
+			auto: true
+		});
+
+		new mSlideIMG({
+			mslide: '#slide4',
+			mcontent: '#slide4 .mcontent',
+			navclass: 'mnav2',
+			current: 'active'
+		});
+
+	},false);
+</script>
+</head>
+<body>
+
+	<div class="mslide" id="slide">
+		<ul class="mcontent">
+			<li><img src="images/01.jpg" /></li>
+			<li><img src="images/02.jpg" /></li>
+			<li><img src="images/03.jpg" /></li>
+			<li><img src="images/04.jpg" /></li>
+		</ul>
+	</div><!-- End mslide -->
+
+	<div class="mslide" id="slide2">
+		<ul class="mcontent">
+			<li><img src="images/01.jpg" /></li>
+			<li><img src="images/02.jpg" /></li>
+			<li><img src="images/03.jpg" /></li>
+			<li><img src="images/04.jpg" /></li>
+		</ul>
+	</div><!-- End mslide -->
+
+	<div class="mslide" id="slide3">
+		<ul class="mcontent">
+			<li><img src="images/01.jpg" /></li>
+			<li><img src="images/02.jpg" /></li>
+			<li><img src="images/03.jpg" /></li>
+			<li><img src="images/04.jpg" /></li>
+		</ul>
+	</div><!-- End mslide -->
+
+	<div class="mslide" id="slide4">
+		<ul class="mcontent">
+			<li><img src="images/02.jpg" /></li>
+			<li><img src="images/03.jpg" /></li>
+		</ul>
+	</div><!-- End mslide -->
+	
+</body>
+</html>
